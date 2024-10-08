@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>View Workouts</title>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <i class="fas fa-home"></i>
+      </a>
+      <div class="nav__buttons">
+        <a href="log-workout.html" class="nav__button">Log Workout</a>
+        <a href="view-workouts.html" class="nav__button">View Workouts</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main class="main section container">
+    <h1 class="section__title">Your Previous Workouts</h1>
+
+    <!-- Workout Table -->
+    <div class="table-container">
+      <table class="workout__table" id="workoutTable">
+        <thead>
+          <tr>
+            <th>
+              Date
+              <select id="filterDate" class="table-filter">
+                <option value="">All Dates</option>
+                <!-- Dynamic date options will be inserted here -->
+              </select>
+            </th>
+            <th>
+              Exercise
+              <select id="filterExercise" class="table-filter">
+                <option value="">All Exercises</option>
+                <!-- Dynamic exercise options will be inserted here -->
+              </select>
+            </th>
+            <th>Weight (kg)</th> <!-- Weight column -->
+            <th>Sets</th>
+            <th>Reps</th>
+            <th class="remove-col">Remove</th> <!-- Remove column -->
+          </tr>
+        </thead>
+        <tbody id="workoutLog">
+          <!-- Workout data will be dynamically inserted here -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Reset Filters Button -->
+    <div class="reset-container">
+      <button id="resetFilters" class="button">Reset Filters</button>
+    </div>
+  </main>
+
+  <!-- JS -->
+  <script src="src/js/app.js"></script>
+</body>
+</html>
